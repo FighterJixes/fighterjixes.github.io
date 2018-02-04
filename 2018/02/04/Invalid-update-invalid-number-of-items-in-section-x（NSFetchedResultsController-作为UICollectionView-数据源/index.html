@@ -79,32 +79,18 @@
 
 
 
-<meta name="description" content="&amp;emsp;&amp;emsp;本人平时有很多关于app的小想法，一直计划在有空的时候在App Store上传一些小应用，近段时间刚好有空就申请了苹果个人的开发者账号，在申请的过程中碰到了一个不少人遇到的问题，在这我觉得给大家分享一下能有助于帮大家解决类似的问题。 &amp;emsp;&amp;emsp;首先我给大家讲一下我的申请流程：">
+<meta name="description" content="&amp;emsp;&amp;emsp;Core Data是很好的东西，开发人员不用关心数据存储细节和SQL语句即可进行数据持久化，但Core Data使用不合理的话也将给自己产生不少坑，本人自认也是Core Data小白一枚，只是想给大家分享一个个人结合NSFetchedResultsController作为UICollectionView数据源开发过程碰到的问题。">
 <meta name="keywords" content="Apple developer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="苹果开发者账号Pending状态处理(2018个人开发者账号申请流程)">
-<meta property="og:url" content="http://yoursite.com/2018/01/22/苹果开发者账号Pending状态处理/index.html">
+<meta property="og:title" content="Invalid update: invalid number of items in section x（NSFetchedResultsController 作为UICollectionView 数据源)">
+<meta property="og:url" content="http://yoursite.com/2018/02/04/Invalid-update-invalid-number-of-items-in-section-x（NSFetchedResultsController-作为UICollectionView-数据源/index.html">
 <meta property="og:site_name" content="暄玄烜炫">
-<meta property="og:description" content="&amp;emsp;&amp;emsp;本人平时有很多关于app的小想法，一直计划在有空的时候在App Store上传一些小应用，近段时间刚好有空就申请了苹果个人的开发者账号，在申请的过程中碰到了一个不少人遇到的问题，在这我觉得给大家分享一下能有助于帮大家解决类似的问题。 &amp;emsp;&amp;emsp;首先我给大家讲一下我的申请流程：">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;Core Data是很好的东西，开发人员不用关心数据存储细节和SQL语句即可进行数据持久化，但Core Data使用不合理的话也将给自己产生不少坑，本人自认也是Core Data小白一枚，只是想给大家分享一个个人结合NSFetchedResultsController作为UICollectionView数据源开发过程碰到的问题。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_1.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_2.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_3.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_4.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_5.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_6.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_7.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_8.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_9.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_10.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_11.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_12.jpg">
-<meta property="og:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_13.jpg">
-<meta property="og:updated_time" content="2018-01-29T06:14:17.697Z">
+<meta property="og:updated_time" content="2018-02-04T06:04:38.438Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="苹果开发者账号Pending状态处理(2018个人开发者账号申请流程)">
-<meta name="twitter:description" content="&amp;emsp;&amp;emsp;本人平时有很多关于app的小想法，一直计划在有空的时候在App Store上传一些小应用，近段时间刚好有空就申请了苹果个人的开发者账号，在申请的过程中碰到了一个不少人遇到的问题，在这我觉得给大家分享一下能有助于帮大家解决类似的问题。 &amp;emsp;&amp;emsp;首先我给大家讲一下我的申请流程：">
-<meta name="twitter:image" content="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_1.jpg">
+<meta name="twitter:title" content="Invalid update: invalid number of items in section x（NSFetchedResultsController 作为UICollectionView 数据源)">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;Core Data是很好的东西，开发人员不用关心数据存储细节和SQL语句即可进行数据持久化，但Core Data使用不合理的话也将给自己产生不少坑，本人自认也是Core Data小白一枚，只是想给大家分享一个个人结合NSFetchedResultsController作为UICollectionView数据源开发过程碰到的问题。">
 
 
 
@@ -134,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/22/苹果开发者账号Pending状态处理/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/04/Invalid-update-invalid-number-of-items-in-section-x（NSFetchedResultsController-作为UICollectionView-数据源/"/>
 
 
 
 
 
-  <title>苹果开发者账号Pending状态处理(2018个人开发者账号申请流程) | 暄玄烜炫</title>
+  <title>Invalid update: invalid number of items in section x（NSFetchedResultsController 作为UICollectionView 数据源) | 暄玄烜炫</title>
   
 
 
@@ -325,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/22/苹果开发者账号Pending状态处理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/04/Invalid-update-invalid-number-of-items-in-section-x（NSFetchedResultsController-作为UICollectionView-数据源/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jixes">
@@ -342,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">苹果开发者账号Pending状态处理(2018个人开发者账号申请流程)</h1>
+          <h1 class="post-title" itemprop="name headline">Invalid update: invalid number of items in section x（NSFetchedResultsController 作为UICollectionView 数据源)</h1>
         
 
         <div class="post-meta">
@@ -354,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-22T15:38:14+08:00">
-                2018-01-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-04T10:59:09+08:00">
+                2018-02-04
               </time>
             
 
@@ -394,7 +380,7 @@
 
           
           
-             <span id="/2018/01/22/苹果开发者账号Pending状态处理/" class="leancloud_visitors" data-flag-title="苹果开发者账号Pending状态处理(2018个人开发者账号申请流程)">
+             <span id="/2018/02/04/Invalid-update-invalid-number-of-items-in-section-x（NSFetchedResultsController-作为UICollectionView-数据源/" class="leancloud_visitors" data-flag-title="Invalid update: invalid number of items in section x（NSFetchedResultsController 作为UICollectionView 数据源)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -425,36 +411,16 @@
       
 
       
-        <p>&emsp;&emsp;本人平时有很多关于app的小想法，一直计划在有空的时候在App Store上传一些小应用，近段时间刚好有空就申请了苹果个人的开发者账号，在申请的过程中碰到了一个不少人遇到的问题，在这我觉得给大家分享一下能有助于帮大家解决类似的问题。</p>
-<p>&emsp;&emsp;首先我给大家讲一下我的申请流程：</p>
-<blockquote>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_1.jpg" alt="步骤一"></p>
-</blockquote>
+        <p>&emsp;&emsp;Core Data是很好的东西，开发人员不用关心数据存储细节和SQL语句即可进行数据持久化，但Core Data使用不合理的话也将给自己产生不少坑，本人自认也是Core Data小白一枚，只是想给大家分享一个个人结合NSFetchedResultsController作为UICollectionView数据源开发过程碰到的问题。</p>
 <a id="more"></a>
-<blockquote>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_2.jpg" alt="步骤二"></p>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_3.jpg" alt="步骤三"></p>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_4.jpg" alt="步骤四"></p>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_5.jpg" alt="步骤五"></p>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_6.jpg" alt="步骤六"></p>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_7.jpg" alt="步骤七"></p>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_8.jpg" alt="步骤八"></p>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_9.jpg" alt="步骤九"></p>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_10.jpg" alt="步骤十"></p>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_11.jpg" alt="步骤十一"></p>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_12.jpg" alt="步骤十二"></p>
-</blockquote>
-<hr>
-<p>&emsp;&emsp;在以上步骤都完成后并完成支付后便会收到两份确认邮件，本以为这样子就算是成功申请为开发者账号了，可是进入到开发者账号中心时，结果看到自己的账号为“pending”状态（如图）：</p>
-<blockquote>
-<p><img src="https://github.com/FighterJixes/fighterjixes.github.io/raw/master/images/res_13.jpg" alt="步骤十三"></p>
-</blockquote>
-<p>点击“complete your purchase now”结果又回到步骤一，这时我就纳闷了，这费用不也都顺利支付了怎么还没能成为开发者账号，于是再看了看开发者账号中心，下面写着工作人员将会在48小时之内处理完毕，于是想了想可能要等够两天吧，于是就耐心的等了两天…</p>
-<p>&emsp;&emsp;两天之后我重新回到开发者中心看账号状态，结果还是“pending”，我就觉得是不是什么步骤发生错误了，于是上网了解，查看相关案例，对于“pending”状态众说纷纭，可能的原因如下：支付的信用卡名字和AppleID的名字不一样、大陆申请过程要等好几天。</p>
-<p>&emsp;&emsp;对于以上两个原因，我个人表示都不能接受，第一如果说和信用卡名字不一样的话导致的应该是扣款问题，但我能成功扣款，问题应该不在这。第二个原因的话官方也声明了48小时内处理完毕，没能48小时处理完毕一定是某个步骤存在问题。最后，个人觉得干等也不是方法，于是给苹果技术支持打了电话（这儿是考验耐心的地方，苹果技术支持很难打进去，我打了约24分钟才接通电话）并给客服反应了情况，于是客服马上就处理了，账户即刻变为开发者账号，“pending”状态也没了。</p>
-<hr>
-<p><strong>总结：</strong><br><strong>&emsp;&emsp;个人申请步骤并不存在问题，而是苹果处理上的问题。对于“pending”状态的最好处理方式就是打电话给苹果客服，当然大前提是要能打进去😂。</strong></p>
-<p>PS:<a href="https://developer.apple.com/contact/phone/cn/" target="_blank" rel="noopener">苹果技术支持联系方式</a></p>
+<p>&emsp;&emsp;场景如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line">//懒加载 NSFetchedResultsController getter</span><br><span class="line">- (NSFetchedResultsController *)recordsFetchedResultsController</span><br><span class="line">&#123;</span><br><span class="line">    if (_recordsFetchedResultsController == nil)</span><br><span class="line">    &#123;</span><br><span class="line">        NSManagedObjectContext *moc = [NSManagedObjectContext MR_defaultContext];</span><br><span class="line">        </span><br><span class="line">        NSEntityDescription *entity = [NSEntityDescription entityForName:NSStringFromClass([xxx class])</span><br><span class="line">                                                  inManagedObjectContext:moc];</span><br><span class="line">        </span><br><span class="line">        NSSortDescriptor *sd1 = [[NSSortDescriptor alloc] initWithKey:@&quot;xxx&quot; ascending:NO];</span><br><span class="line">        </span><br><span class="line">        NSArray *sortDescriptors = [NSArray arrayWithObjects: sd1, nil];</span><br><span class="line">        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];</span><br><span class="line">        </span><br><span class="line">        [fetchRequest setEntity:entity];</span><br><span class="line">        [fetchRequest setSortDescriptors:sortDescriptors];</span><br><span class="line">        [fetchRequest setIncludesPendingChanges:YES];</span><br><span class="line">        </span><br><span class="line">        _recordsFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest</span><br><span class="line">                                                                               managedObjectContext:moc</span><br><span class="line">                                                                                 sectionNameKeyPath:nil</span><br><span class="line">                                                                                          cacheName:nil];</span><br><span class="line">        </span><br><span class="line">        [_recordsFetchedResultsController setDelegate:self];</span><br><span class="line">        </span><br><span class="line">        NSError *error = nil;</span><br><span class="line">        </span><br><span class="line">        if (![_recordsFetchedResultsController performFetch:&amp;error])</span><br><span class="line">        &#123;</span><br><span class="line">            DDLogError(@&quot;Error performing fetch: %@&quot;, error);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return _recordsFetchedResultsController;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//数据源</span><br><span class="line">- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section</span><br><span class="line">&#123;</span><br><span class="line">        id &lt;NSFetchedResultsSectionInfo&gt; sectionInfo = [self.recordsFetchedResultsController sections][section];</span><br><span class="line">        return [sectionInfo numberOfObjects];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//NSFetchedResultsController delegate</span><br><span class="line">- (void)controller:(NSFetchedResultsController *)controller</span><br><span class="line">   didChangeObject:(id)anObject</span><br><span class="line">       atIndexPath:(NSIndexPath *)indexPath</span><br><span class="line">     forChangeType:(NSFetchedResultsChangeType)type</span><br><span class="line">      newIndexPath:(NSIndexPath *)newIndexPath</span><br><span class="line">&#123;</span><br><span class="line">    dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">        if (controller == self.recordsFetchedResultsController)</span><br><span class="line">        &#123;</span><br><span class="line">            switch (type)</span><br><span class="line">            &#123;</span><br><span class="line">                case NSFetchedResultsChangeInsert:</span><br><span class="line">                    [_recordsCollectionView insertItemsAtIndexPaths:@[newIndexPath]];</span><br><span class="line">                    break;</span><br><span class="line">                    </span><br><span class="line">                case NSFetchedResultsChangeDelete:</span><br><span class="line">                    [_recordsCollectionView deleteItemsAtIndexPaths:@[indexPath]];</span><br><span class="line">                    break;</span><br><span class="line">                    </span><br><span class="line">                case NSFetchedResultsChangeMove:</span><br><span class="line">                    [_recordsCollectionView deleteItemsAtIndexPaths:@[indexPath]];</span><br><span class="line">                    [_recordsCollectionView insertItemsAtIndexPaths:@[newIndexPath]];</span><br><span class="line">                    break;</span><br><span class="line">                    </span><br><span class="line">                case NSFetchedResultsChangeUpdate:</span><br><span class="line">                    [_recordsCollectionView reloadItemsAtIndexPaths:@[indexPath]];</span><br><span class="line">                    break;</span><br><span class="line">                    </span><br><span class="line">                default:</span><br><span class="line">                    break;</span><br><span class="line">            &#125;</span><br><span class="line">         &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上是未优化前的代码，时常在进行Items</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- (void)controller:(NSFetchedResultsController *)controller</span><br><span class="line">   didChangeObject:(id)anObject</span><br><span class="line">       atIndexPath:(NSIndexPath *)indexPath</span><br><span class="line">     forChangeType:(NSFetchedResultsChangeType)type</span><br><span class="line">      newIndexPath:(NSIndexPath *)newIndexPath...</span><br></pre></td></tr></table></figure>
+<p>进行增删改后出现App崩溃，原因如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSInternalInconsistencyException</span><br><span class="line">Invalid update: invalid number of items in section 0. The number of items contained in an existing section after the update (4) must be equal to the number of items contained in that section before the update (4), plus or minus the number of items inserted or deleted from that section (1 inserted, 0 deleted) and plus or minus the number of items moved into or out of that section (0 moved in, 0 moved out).</span><br></pre></td></tr></table></figure>
+<p>原因显而易见，正如描述的那样，在cell 的增删时没有对<br><code>- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section</code>的数量进行更新，导致cell的数量与数据源的数量不一致而程序崩溃。<br>&emsp;&emsp;在网上找了很久都没找着解决办法，后来上GitHub找了个NSFetchedResultsController 与 UICollectionView搭配使用的范例（在这表示感谢作者分享），仔细看了一下作者的使用方式，发现更为规范整洁，于是对自己现有的代码进行优化，bug就解决了。</p>
+<p><a href="https://github.com/Christian1313/CollectionViewWithSectionsAndNSFetchresultController/blob/master/CollectionViewWithNSFetchResultControllerAndSections/DataCollectionViewController.m" target="_blank" rel="noopener">NSFetchedResultsController与UICollectionView结合使用范例</a></p>
 
       
     </div>
@@ -485,8 +451,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/20/不能以“username-github-io”微博客地址访问的原因/" rel="next" title="不能以“username.github.io”为博客地址进行访问的原因">
-                <i class="fa fa-chevron-left"></i> 不能以“username.github.io”为博客地址进行访问的原因
+              <a href="/2018/01/29/UIImagePickerController-进行交互后UI冻结-App假死状态/" rel="next" title="UIImagePickerController 进行相机交互后出现UI冻结/App假死状态">
+                <i class="fa fa-chevron-left"></i> UIImagePickerController 进行相机交互后出现UI冻结/App假死状态
               </a>
             
           </div>
@@ -494,10 +460,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/29/审核被拒Guideline-5-1-1-Legal-Privacy-Data-Collection-and-Storage解决方法/" rel="prev" title="审核被拒Guideline 5.1.1 - Legal - Privacy - Data Collection and Storage解决方法">
-                审核被拒Guideline 5.1.1 - Legal - Privacy - Data Collection and Storage解决方法 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
